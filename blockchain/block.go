@@ -30,7 +30,7 @@ func NewBlock(transactions []*Transaction, prevBlockHash []byte, validator []byt
 		Timestamp:     time.Now(),
 		Transactions:  transactions,
 		PrevBlockHash: prevBlockHash,
-		Validator:     validator,
+		Validator:     validator, // Validators public key
 	}
 	// Compute deterministic hash immediately to maintain referential integrity
 	block.Hash = block.calculateHash()
